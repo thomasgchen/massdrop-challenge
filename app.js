@@ -1,6 +1,6 @@
-var express = require("express");
-var jobsController = require("./controllers/jobsController");
-var bodyParser = require("body-parser");
+var express = require('express');
+var jobsController = require('./controllers/jobsController');
+var bodyParser = require('body-parser');
 
 var app = express();
 
@@ -14,5 +14,5 @@ jobsController(app);
 // listen to port
 var port = 3000;
 app.listen(port, function() {
-  console.log("Listening to port", port);
+  console.log('Listening to port', port);
 });

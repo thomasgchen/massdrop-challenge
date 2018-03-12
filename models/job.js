@@ -1,15 +1,15 @@
-var mongoose = require("mongoose");
-mongoose.Promise = global.Promise;
+var mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
 
 // connect to the database
-mongoose.connect("mongodb://localhost:27017/jobsDatabase");
+mongoose.connect('mongodb://localhost:27017/jobsDatabase');
 
 // create a schema
 var jobSchema = new mongoose.Schema(
   {
     status: {
       type: String,
-      default: "pending"
+      default: 'Pending'
     },
     createdAt: {
       type: Date,
@@ -28,4 +28,4 @@ var jobSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Job", jobSchema);
+module.exports = mongoose.model('Job', jobSchema);
